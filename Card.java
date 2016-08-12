@@ -14,7 +14,7 @@ public class Card {
     public Card(String face, String suit) {
         this.face = face;
         this.suit = suit;
-        if (face.equals("ace")) {
+        if (isAce()) {
             val = 11;
         }
         else {
@@ -44,6 +44,10 @@ public class Card {
 
     public boolean isFaceCard() {
         return (!face.equals(DEFAULT_FACE));
+    }
+
+    public boolean isAce() {
+        return (face.equals("ace"));
     }
 
     @Override
